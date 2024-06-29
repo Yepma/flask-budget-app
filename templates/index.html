@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Budget Input</title>
+</head>
+<body>
+    <h1>Enter Monthly Budget Details</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="client">Client:</label><br>
+        <input type="text" id="client" name="client" required><br><br>
+
+        <label for="channel">Channel:</label><br>
+        <input type="text" id="channel" name="channel" required><br><br>
+
+        <label for="product">Product:</label><br>
+        <input type="text" id="product" name="product" required><br><br>
+
+        <label for="date">Month and Year (e.g., June, 2023):</label><br>
+        <input type="text" id="date" name="date" required><br><br>
+
+        <label for="budget">Budget:</label><br>
+        <input type="number" id="budget" name="budget" step="0.01" required><br><br>
+
+        <label for="goal_1">Goal 1 (optional):</label><br>
+        <input type="number" id="goal_1" name="goal_1" step="0.01"><br><br>
+
+        <label for="goal_2">Goal 2 (optional):</label><br>
+        <input type="number" id="goal_2" name="goal_2" step="0.01"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
